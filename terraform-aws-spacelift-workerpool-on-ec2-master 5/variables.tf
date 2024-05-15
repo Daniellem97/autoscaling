@@ -201,13 +201,13 @@ variable "volume_encryption_kms_key_id" {
 variable "autoscaling_max_create" {
   description = "The maximum number of instances the utility is allowed to create in a single run"
   type        = number
-  default     = 1
+  default     = 2
 }
 
 variable "autoscaling_max_terminate" {
   description = "The maximum number of instances the utility is allowed to terminate in a single run"
   type        = number
-  default     = 1
+  default     = 0
 }
 
 variable "autoscaling_timeout" {
