@@ -20,7 +20,29 @@ module "my_workerpool" {
   worker_pool_id    = var.worker_pool_id
   security_groups   = var.security_groups
   vpc_subnets       = var.vpc_subnets
+  api_key_secret    = var.api_key_secret
+  api_key_id        = var.api_key_id
+  api_key_endpoint  = var.api_key_endpoint
 }
+
+variable "spacelift_api_key_id" {
+  type        = string
+  description = "ID of the Spacelift API key to use"
+  default     = null
+}
+
+variable "spacelift_api_key_secret" {
+  type        = string
+  sensitive   = true
+  description = "Secret corresponding to the Spacelift API key to use"
+}
+
+variable "spacelift_api_key_endpoint" {
+  type        = string
+  description = "Full URL of the Spacelift API endpoint to use, eg. https://demo.app.spacelift.io"
+  default     = null
+}
+
 
 variable "worker_pool_config" {
   type = string
