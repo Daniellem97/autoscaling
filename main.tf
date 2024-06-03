@@ -26,7 +26,7 @@ variable "worker_pool_config" {
   type = string
 }
 
-variable "nonprod_private_key" {
+variable "worker_pool_private_key" {
   type = string
 }
 
@@ -43,10 +43,6 @@ variable "vpc_subnets" {
   type    = list(string)
 }
 
- variable "poweroff_delay" {
-   type = number
-   description = "number of seconds to wait before shutting down a failed instance"
- }
 
  variable "autoscaling_max_create" {
   description = "The maximum number of instances the utility is allowed to create in a single run"
